@@ -1,4 +1,6 @@
-function myFunc(p1,p2){
-    document.getElementById('on').src='pic_bulbon.gif'
-    document.getElementById('off').src='pic_bulboff.gif'
+function myFuncOn(){
+    document.getElementById("buttonClick").src="pic_bulbon.gif"
+}
+function myFuncOff(){
+    document.getElementById("buttonClick").src="pic_bulboff.gif"
 }
