@@ -1,6 +1,6 @@
 function kabisaYili(year,month){
     if (year%4===0){
-        console.log(year,"bu yil kabisa yili");
+        document.getElementById("answer").innerHTML=(year,"bu yil kabisa yili");
         switch (month){
             case "yanvar":
             case "mart":
@@ -9,15 +9,16 @@ function kabisaYili(year,month){
             case "avgust":
             case "oktabr":
             case "dekabr":
-                console.log(month,"bu oyda 31 kun bor");
+                document.getElementById("answer").innerHTML=(month,"bu oyda 31 kun bor");
                 break;
             case "fevral":
-                console.log(month,"bu oyda 28 kun bor");
+                document.getElementById("answer").innerHTML=(month,"bu oyda 29 kun bor");
+                break;
             case "aprel":
             case "iyun":
             case "sentabr":
             case "noyabr":
-                console.log(month,"bu oyda 30 kun bor");
+                document.getElementById("answer").innerHTML=(month,"bu oyda 30 kun bor");
                 break;
             default :
             console.log("bunday yoq");
@@ -25,7 +26,7 @@ function kabisaYili(year,month){
         }
     }
     else {
-        console.log(year,"kabisa yili emas");
+        document.getElementById("answer").innerHTML=(year,"kabisa yili emas");
         switch (month){
         case "yanvar":
         case "mart":
@@ -34,17 +35,11 @@ function kabisaYili(year,month){
         case "avgust":
         case "oktabr":
         case "dekabr":
-            console.log(month,"bu oyda 31 kun bor");
+            document.getElementById("answer").innerHTML=(month,"bu oyda 31 kun bor");
             break;
         case "fevral":
-            console.log(month,"bu oyda 28 kun bor");
-        case "aprel":
-        case "iyun":
-        case "sentabr":
-        case "noyabr":
-            console.log(month,"bu oyda 30 kun bor");
-            break;
+            document.getElementById("answer").innerHTML=(month,"bu oyda 28 kun bor");
         }
-     }
+    }
 }
-kabisaYili(2001,"fevral")
+kabisaYili(document.getElementById("yearInp").innerText,document.getElementById("monthInp").innerText)
