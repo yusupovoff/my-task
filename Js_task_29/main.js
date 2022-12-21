@@ -1,7 +1,10 @@
-function kabisaYili(year,month){
-    if (year%4===0){
-        document.getElementById("answer").innerHTML=(year,"bu yil kabisa yili");
-        switch (month){
+const yearInp_one=document.getElementById("yearInp").value
+console.log(yearInp_one);
+const monthInp_two=document.getElementById("monthInp").value
+function kabisaYili(yearInp_one,monthInp_two){
+    if (yearInp_one%4===0){
+        document.getElementById("answer").innerHTML=(yearInp_one,"bu yil kabisa yili");
+        switch (monthInp_two){
             case "yanvar":
             case "mart":
             case "may":
@@ -9,16 +12,16 @@ function kabisaYili(year,month){
             case "avgust":
             case "oktabr":
             case "dekabr":
-                document.getElementById("answer").innerHTML=(month,"bu oyda 31 kun bor");
+                document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 31 kun bor");
                 break;
             case "fevral":
-                document.getElementById("answer").innerHTML=(month,"bu oyda 29 kun bor");
+                document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 29 kun bor");
                 break;
             case "aprel":
             case "iyun":
             case "sentabr":
             case "noyabr":
-                document.getElementById("answer").innerHTML=(month,"bu oyda 30 kun bor");
+                document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 30 kun bor");
                 break;
             default :
             console.log("bunday yoq");
@@ -26,8 +29,8 @@ function kabisaYili(year,month){
         }
     }
     else {
-        document.getElementById("answer").innerHTML=(year,"kabisa yili emas");
-        switch (month){
+        document.getElementById("answer").innerHTML=(yearInp_one,"kabisa yili emas");
+        switch (monthInp_two){
         case "yanvar":
         case "mart":
         case "may":
@@ -35,11 +38,11 @@ function kabisaYili(year,month){
         case "avgust":
         case "oktabr":
         case "dekabr":
-            document.getElementById("answer").innerHTML=(month,"bu oyda 31 kun bor");
+            document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 31 kun bor");
             break;
         case "fevral":
-            document.getElementById("answer").innerHTML=(month,"bu oyda 28 kun bor");
+            document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 28 kun bor");
         }
     }
 }
-kabisaYili(document.getElementById("yearInp").innerText,document.getElementById("monthInp").innerText)
+kabisaYili(yearInp_one,monthInp_two)
