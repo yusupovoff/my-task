@@ -1,7 +1,7 @@
-const yearInp_one=document.getElementById("yearInp").value
-console.log(yearInp_one);
-const monthInp_two=document.getElementById("monthInp").value
+// console.log(yearInp_one);
 function kabisaYili(yearInp_one,monthInp_two){
+    let yearInp_one=document.getElementById("yearInp").value
+    let monthInp_two=document.getElementById("monthInp").value
     if (yearInp_one%4===0){
         document.getElementById("answer").innerHTML=(yearInp_one,"bu yil kabisa yili");
         switch (monthInp_two){
