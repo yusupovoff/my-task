@@ -1,9 +1,9 @@
 // console.log(yearInp_one);
+let yearInp_one=document.getElementById("yearInp").value
+let monthInp_two=document.getElementById("monthInp").value
 function kabisaYili(yearInp_one,monthInp_two){
-    let yearInp_one=document.getElementById("yearInp").value
-    let monthInp_two=document.getElementById("monthInp").value
     if (yearInp_one%4===0){
-        document.getElementById("answer").innerHTML=(yearInp_one,"bu yil kabisa yili");
+        document.getElementById("yearKabisa").innerHTML=(yearInp_one,"bu yil kabisa yili");
         switch (monthInp_two){
             case "yanvar":
             case "mart":
@@ -24,12 +24,12 @@ function kabisaYili(yearInp_one,monthInp_two){
                 document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 30 kun bor");
                 break;
             default :
-            console.log("bunday yoq");
+            document.getElementById("answer").innerHTML=(monthInp_two,"bunday oy yo'q");
                 break;
         }
     }
     else {
-        document.getElementById("answer").innerHTML=(yearInp_one,"kabisa yili emas");
+        document.getElementById("yearKabisa").innerHTML=(yearInp_one,"kabisa yili emas");
         switch (monthInp_two){
         case "yanvar":
         case "mart":
@@ -42,6 +42,16 @@ function kabisaYili(yearInp_one,monthInp_two){
             break;
         case "fevral":
             document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 28 kun bor");
+            break;
+        case "aprel":
+        case "iyun":
+        case "sentabr":
+        case "noyabr":
+        document.getElementById("answer").innerHTML=(monthInp_two,"bu oyda 30 kun bor");
+            break;
+            default :
+        console.log("bunday yoq");
+                break;
         }
     }
 }
