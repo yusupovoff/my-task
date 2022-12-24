@@ -13,6 +13,9 @@
   </head>
   <body>
     <script src="main.js"></script>
+    <div class="title_text">
+        <h1>Tug'ilgan Yilingiz |  Kabisa yili ekanini aniqlang</h1>
+    </div>
     <div class="form__group">
       <div class="box1">
         <input
@@ -22,7 +25,7 @@
           placeholder="yilni kiriting"
           required=""
         />
-        <p class="form__label">Yilni to'liq kiriting</p>
+        <p class="form__label">Yilni kiriting</p>
       </div>
       <div class="box1">
         <input
@@ -32,17 +35,19 @@
           placeholder="oy nomini kiriting"
           required=""
         />
-        <p class="form__label">Oy nomini to'g'ri yozing</p>
+        <p class="form__label">Oy nomini kiriting</p>
       </div>
       <button class="btn" onclick="kabisaYili(yearInp.value,monthInp.value)">
-        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+        <svg width="105px" height="40px" viewBox="0 0 170 60" class="border">
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
           <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
         </svg>
         <span>Bajarish</span>
       </button>
     </div>
+    <div class="answerShow">
     <div id="answer"></div>
     <div id="yearKabisa"></div>
+    </div>
   </body>
 </html>
