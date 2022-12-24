@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kabisa | YILI NI aniqla</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <script src="main.js"></script>
-    <input id="yearInp" type="number" placeholder="yilni kiriting" >
-    <input  id="monthInp" type="text" placeholder="oy nomini kiriting" >
-    <button onclick="kabisaYili(yearInp.value,monthInp.value)">bajarish</button>
+    <div class="form__group">
+      <div class="box1">
+        <input
+          id="yearInp"
+          type="text"
+          class="form__input"
+          placeholder="yilni kiriting"
+          required=""
+        />
+        <p class="form__label">Yilni to'liq kiriting</p>
+      </div>
+      <div class="box1">
+        <input
+          id="monthInp"
+          type="text"
+          class="form__input"
+          placeholder="oy nomini kiriting"
+          required=""
+        />
+        <p class="form__label">Oy nomini to'g'ri yozing</p>
+      </div>
+      <button class="btn" onclick="kabisaYili(yearInp.value,monthInp.value)">
+        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg>
+        <span>Bajarish</span>
+      </button>
+    </div>
     <div id="answer"></div>
     <div id="yearKabisa"></div>
-</body>
+  </body>
 </html>
